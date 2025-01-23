@@ -79,7 +79,7 @@ export default function Index() {
     const allPermissionsGranted = permissionsGranted.camera && permissionsGranted.location && permissionsGranted.media;
 
     return (
-        <View style={{ flex: 1, padding: 40, gap: 40 }}>
+        <View style={{ flex: 1, padding: 40, gap: 40, justifyContent: 'center' }}>
             <Welcome />
             <Button onPress={() => allPermissionsGranted && router.push("/camera")}>
                 <Button.Title>{allPermissionsGranted ? "Começar" : "Aguardando Permissões"}</Button.Title>

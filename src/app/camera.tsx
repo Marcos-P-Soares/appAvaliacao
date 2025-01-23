@@ -4,6 +4,7 @@ import * as Location from 'expo-location';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState, useRef } from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
+import { router } from "expo-router";
 
 import { IconRepeat, IconCircleFilled, IconPhoto } from "@tabler/icons-react-native";
 
@@ -109,7 +110,7 @@ export default function App() {
                         <Button style={styles.button} onPress={takePhoto}>
                             <Button.Icon icon={IconCircleFilled} />
                         </Button>
-                        <Button style={styles.button}>
+                        <Button style={styles.button} onPress={() => router.push("/gallery")}>
                             <Button.Icon icon={IconPhoto} />
                         </Button>
                     </View>
